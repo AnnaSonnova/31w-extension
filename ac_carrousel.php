@@ -38,7 +38,12 @@ add_action('wp_enqueue_scripts','acc_enqueue' );
 function genere_boite(){
 $contenu = " 
 <button class='btn_modal'>Boite modal</button>
-<div class= 'carrousel'>Carrousel<button class='btn_fermer'>X</button></div>
+<div class= 'carrousel'>Carrousel
+    <button class='btn_fermer'>X</button>
+    <div class='noeud_img'>
+	<img src='' class='panel__image' >			
+	</div>
+</div>
 ";
 return $contenu;
 }
