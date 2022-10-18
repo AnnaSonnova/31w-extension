@@ -1,7 +1,7 @@
 .carrousel {
   position: absolute;
   left: 25vw;
-  top: 45vh;
+  top: 55vh;
   width: 50vw;
   height: 50vh;
   background-color: rgb(85, 143, 111);
@@ -21,4 +21,6 @@
   position: absolute;
   right: 0;
   top: 0;
+  width: 2rem;
+  height: 2rem;
 }/*# sourceMappingURL=style.css.map */
