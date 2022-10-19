@@ -40,9 +40,6 @@ $contenu = "
 <button class='btn_modal'>Boite modal</button>
 <div class= 'carrousel'>Carrousel
     <button class='btn_fermer'>X</button>
-    <div class='noeud_img'>
-	    <img src='' class='panel__image' >			
-	</div>
     <figure class = 'carrousel__figure'></figure>
     <form class = 'carrousel__form'></form>
 </div>

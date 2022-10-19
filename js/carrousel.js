@@ -25,7 +25,7 @@ let dernierIndex = -1;
     /* Le conteneur principal de la galerie */
     let elmGalerie = document.querySelector(".galerie");
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
-
+console.log(elmGalerieImg);
     /*====etap1 parcourir les images de la galerie==========*/
     
     for (const elmImg of elmGalerieImg) {
