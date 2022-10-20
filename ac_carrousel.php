@@ -15,35 +15,35 @@ Version: 1.0.0
 // wp_enqueue_script() // intègre le script dans la page
 // wp_enqueue_scripts // le hook
 
-function acc_enqueue(){
-    $version_css = filemtime(plugin_dir_path(__FILE__)."style.css");
-    $version_js = filemtime(plugin_dir_path(__FILE__)."js/carrousel.js");
+function annacc_enqueue(){
+    $version_css = filemtime(plugin_dir_path(__FILE__) . "style.css");
+    $version_js = filemtime(plugin_dir_path(__FILE__) . "js/carrousel.js");
 
-    wp_enqueue_style("acc_style_carrousel",
+    wp_enqueue_style("annacc_style_carrousel",
                        plugin_dir_url(__FILE__) . "style.css",
                        array(),
                        $version_css,
                        false);
 
-    wp_enqueue_script("acc_js_carrousel",
+    wp_enqueue_script("annacc_js_carrousel",
                        plugin_dir_url(__FILE__) . "js/carrousel.js",
                        array(),
                        $version_js,
                        true);
 }
-add_action('wp_enqueue_scripts','acc_enqueue' );
+add_action('wp_enqueue_scripts','annacc_enqueue' );
 
 
 
 function genere_boite(){
-$contenu = " 
-<button class='btn_modal'>Boite modal</button>
-<div class= 'carrousel'>Carrousel
-    <button class='btn_fermer'>X</button>
-    <figure class = 'carrousel__figure'></figure>
-    <form class = 'carrousel__form'></form>
-</div>
-";
-return $contenu;
+    $contenu = "
+    <button class='btn_modale'>boîte modale</button>
+    <div class='carrousel'>
+        <button class='btn_fermer'>X</button>
+        <figure class='carrousel__figure'></figure>
+        <form class='carrousel__form'></form>
+    </div>";
+    return $contenu;
 }
+
 add_shortcode('ac_carrousel', 'genere_boite');
