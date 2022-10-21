@@ -4,7 +4,7 @@
   top: 45vh;
   width: 60vw;
   height: 90vh;
-  background-color: #6c0303;
+  background-color: #a3793e;
   opacity: 0.5;
   transform: scale(0);
   transition: transform 1s;
@@ -29,14 +29,14 @@
 
 .carrousel__figure {
   position: relative;
-  height: 80%;
-  margin: 25px;
+  height: 100%;
+  margin-top: 2em;
 }
 
 .carrousel__figure__img {
   display: block;
   position: absolute;
-  object-fit: contain;
+  object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;

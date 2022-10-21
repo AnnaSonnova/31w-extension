@@ -1,5 +1,5 @@
 (function () {
-    console.log("carrousel");
+    //console.log("carrousel");
     /* ----------------------------------------- Initialisation des compteurs */
     let index = 0;
     let dernierIndex = -1;
@@ -7,6 +7,7 @@
     /* ---------------------------------------- Les éléments du carrousel */
     /* Le conteneur principal du carrousel */
     let elmCarrousel = document.querySelector(".carrousel");
+    console.log(elmCarrousel);
     /* Bouton temporaire pour ouvrir le carrousel */
     let elmBtnModale = document.querySelector(".btn_modale");
     /* Bouton de fermeture du carrousel  le X de fermeture */
@@ -21,7 +22,8 @@
     /* Le conteneur principal de la galerie */
     let elmGalerie = document.querySelector(".galerie");
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
-  
+
+    console.log('SALUT!!!!!!');
     /* ----------------------------- Étape 1 parcourir les images de la galerie */
   
     for (const elmImg of elmGalerieImg) {
