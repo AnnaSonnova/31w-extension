@@ -86,6 +86,10 @@
         dernierIndex = this.dataset.index;
       });
     }
+
+
+
+    
     elmBtnModale.addEventListener("mousedown", function () {
       console.log("bouton boîte modale");
       elmCarrousel.classList.add("carrousel--ouvrir");

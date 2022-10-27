@@ -61,4 +61,24 @@
 
 .btn_modale {
   display: none;
+}
+
+.btn_fleche_gauche {
+  position: absolute;
+  z-index: 1;
+  color: antiquewhite;
+  bottom: 0;
+  top: 50%;
+  height: 50px;
+}
+
+.btn_fleche_droit {
+  position: absolute;
+  z-index: 1;
+  color: antiquewhite;
+  bottom: 0;
+  right: 0;
+  top: 50%;
+  height: 50px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
