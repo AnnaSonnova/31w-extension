@@ -7,12 +7,16 @@
     /* ---------------------------------------- Les éléments du carrousel */
     /* Le conteneur principal du carrousel */
     let elmCarrousel = document.querySelector(".carrousel");
-    console.log(elmCarrousel);
+    
     /* Bouton temporaire pour ouvrir le carrousel */
     let elmBtnModale = document.querySelector(".btn_modale");
     /* Bouton de fermeture du carrousel  le X de fermeture */
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
-    console.log(elmBtnModaleFermer);
+   
+    let elmFlecheDroit = document.querySelector(".btn_fleche_droit");
+    
+    let elmFlecheGauche = document.querySelector(".btn_fleche_gauche");
+    
     /* figure qui contiendra l'ensemble des images du carrousel */
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
     /* le formulaire qui contiendra l'ensemble des boutons radio */
@@ -23,7 +27,7 @@
     let elmGalerie = document.querySelector(".galerie");
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
 
-    console.log('SALUT!!!!!!');
+    
     /* ----------------------------- Étape 1 parcourir les images de la galerie */
   
     for (const elmImg of elmGalerieImg) {
@@ -32,6 +36,7 @@
       ajouter_img_carrousel(elmImg);
       ajouter_radio_carrousel();
       /* écouteur sur les images de la galerie */
+      
       elmImg.addEventListener("mousedown", function () {
         console.log("galerie");
         console.log("elmImg.dataset.index" + this.dataset.index);
@@ -85,6 +90,23 @@
         console.log(index);
         dernierIndex = this.dataset.index;
       });
+
+      elmFlecheDroit.addEventListener("mousedown", function () {
+
+        //console.log(elmFlecheDroit);
+        if (dernierIndex != -1) {
+          elmCarrousel__figure.children[dernierIndex].classList.remove(
+            "carrousel__figure__img--activer"
+          );
+        }
+        elmCarrousel__figure.children[this.dataset.index].classList.add(
+          "carrousel__figure__img--activer"
+        );
+        //console.log(index);
+        dernierIndex = this.dataset.index;
+      
+      
+    })
     }
 
 
@@ -100,6 +122,33 @@
         console.log(elmBtnModaleFermer);
       elmCarrousel.classList.remove("carrousel--ouvrir");
     });
+
+  
+//   elmFlecheDroit.addEventListener("mousedown", function () {
+
+//     console.log(elmFlecheDroit);
+//     if (dernierIndex != -1) {
+//       elmCarrousel__figure.children[dernierIndex].classList.remove(
+//         "carrousel__figure__img--activer"
+//       );
+//     }
+   
+
+//     elmCarrousel__figure.children[this.dataset.index].classList.add(
+//       "carrousel__figure__img--activer"
+//     );
+//     console.log(index);
+//     dernierIndex = this.dataset.index;
+  
+  
+// })
+
     
-    console.log(elmBtnModaleFermer);
+  elmFlecheGauche.addEventListener("mousedown", function () {
+
+    console.log(elmFlecheGauche);
+  
+});
+    
+   // console.log(elmBtnModaleFermer);
   })();
