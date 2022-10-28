@@ -7,16 +7,14 @@
     /* ---------------------------------------- Les éléments du carrousel */
     /* Le conteneur principal du carrousel */
     let elmCarrousel = document.querySelector(".carrousel");
-    
     /* Bouton temporaire pour ouvrir le carrousel */
     let elmBtnModale = document.querySelector(".btn_modale");
     /* Bouton de fermeture du carrousel  le X de fermeture */
     let elmBtnModaleFermer = document.querySelector(".btn_fermer");
-   
+   /* Bouton droit */
     let elmFlecheDroit = document.querySelector(".btn_fleche_droit");
-    
+    /* Bouton gauche */
     let elmFlecheGauche = document.querySelector(".btn_fleche_gauche");
-    
     /* figure qui contiendra l'ensemble des images du carrousel */
     let elmCarrousel__figure = document.querySelector(".carrousel__figure");
     /* le formulaire qui contiendra l'ensemble des boutons radio */
@@ -48,6 +46,7 @@
         console.log(index);
         dernierIndex = this.dataset.index;
       });
+      //affiche_carrousel_img();
     }
     /**
      * Ajoute une image dans le carrousel
@@ -76,39 +75,32 @@
       /* ------------------------ écouteur sur radio pour afficher une nouvelle image */
       elmCarrousel__form__radio.addEventListener("mousedown", function () {
         //console.log(this.dataset.index);
-  
         if (dernierIndex != -1) {
           elmCarrousel__figure.children[dernierIndex].classList.remove(
             "carrousel__figure__img--activer"
           );
         }
-       
-  
         elmCarrousel__figure.children[this.dataset.index].classList.add(
           "carrousel__figure__img--activer"
         );
         console.log(index);
         dernierIndex = this.dataset.index;
-      });
+      //affiche_carrousel_img();
+       });
 
-      elmFlecheDroit.addEventListener("mousedown", function () {
-
-        //console.log(elmFlecheDroit);
-        if (dernierIndex != -1) {
-          elmCarrousel__figure.children[dernierIndex].classList.remove(
-            "carrousel__figure__img--activer"
-          );
-        }
-        elmCarrousel__figure.children[this.dataset.index].classList.add(
-          "carrousel__figure__img--activer"
-        );
-        //console.log(index);
-        dernierIndex = this.dataset.index;
       
-      
-    })
     }
 
+    // function affiche_carrousel_img(){
+    //   if (dernierIndex != -1){
+    //     elmCarrousel__figure.children[ancien_index].classList.remove('carrousel__figure__img--activer')
+    //   }
+    //   elmCarrousel__figure.children[this.dataset.index].classList.add(
+    //     "carrousel__figure__img--activer"
+    //   );
+    //   console.log(index);
+    //   dernierIndex = this.dataset.index;
+    // }
 
 
     
@@ -124,29 +116,30 @@
     });
 
   
-//   elmFlecheDroit.addEventListener("mousedown", function () {
+  elmFlecheDroit.addEventListener("mousedown", function () {
+    console.log(elmFlecheDroit);
+    for(let i=0; i<elmCarrousel__figure.children.length; i++){
 
-//     console.log(elmFlecheDroit);
-//     if (dernierIndex != -1) {
-//       elmCarrousel__figure.children[dernierIndex].classList.remove(
-//         "carrousel__figure__img--activer"
-//       );
-//     }
-   
-
-//     elmCarrousel__figure.children[this.dataset.index].classList.add(
-//       "carrousel__figure__img--activer"
-//     );
-//     console.log(index);
-//     dernierIndex = this.dataset.index;
-  
-  
-// })
+      if (elmCarrousel__figure.children[i].classList.contains(
+        "carrousel__figure__img--activer") ){
+        
+        elmCarrousel__figure.children[i].classList.remove(
+          "carrousel__figure__img--activer");
+          if(i==8){
+            elmCarrousel__figure.children[0].classList.add("carrousel__figure__img--activer");
+          }else{
+            elmCarrousel__figure.children[i+1].classList.add("carrousel__figure__img--activer");
+            break;
+          }
+      }
+    }  
+})
 
     
   elmFlecheGauche.addEventListener("mousedown", function () {
 
     console.log(elmFlecheGauche);
+    
   
 });
     
