@@ -22,7 +22,7 @@
   
     /* ---------------------------------------- Les éléments de la galerie */
     /* Le conteneur principal de la galerie */
-    let elmGalerie = document.querySelector(".galerie");
+    
     let elmGalerieImg = document.querySelectorAll(".galerie figure img");
 
     
@@ -46,7 +46,7 @@
         console.log(index);
         dernierIndex = this.dataset.index;
       });
-      //affiche_carrousel_img();
+      
     }
     /**
      * Ajoute une image dans le carrousel
@@ -90,24 +90,12 @@
 
       
     }
-
-    // function affiche_carrousel_img(){
-    //   if (dernierIndex != -1){
-    //     elmCarrousel__figure.children[ancien_index].classList.remove('carrousel__figure__img--activer')
-    //   }
-    //   elmCarrousel__figure.children[this.dataset.index].classList.add(
-    //     "carrousel__figure__img--activer"
-    //   );
-    //   console.log(index);
-    //   dernierIndex = this.dataset.index;
-    // }
-
-
-    
+ 
     elmBtnModale.addEventListener("mousedown", function () {
       console.log("bouton boîte modale");
       elmCarrousel.classList.add("carrousel--ouvrir");
     });
+
     //////////////////////////////////////////////////
     elmBtnModaleFermer.addEventListener("mousedown", function () {
 
@@ -157,5 +145,5 @@
   
 });
     
-   // console.log(elmBtnModaleFermer);
+   
   })();
