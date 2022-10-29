@@ -1,5 +1,13 @@
-.carrousel {
+.carrousel,
+.btn_fermer,
+.carrousel__figure__img,
+.carrousel__form,
+.btn_fleche_gauche,
+.btn_fleche_droit {
   position: absolute;
+}
+
+.carrousel {
   left: 30vw;
   top: 45vh;
   width: 60vw;
@@ -20,7 +28,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   right: 0;
   top: 0;
   width: 2rem;
@@ -36,7 +43,6 @@
 
 .carrousel__figure__img {
   display: block;
-  position: absolute;
   object-fit: cover;
   top: 0;
   left: 0;
@@ -51,7 +57,6 @@
 }
 
 .carrousel__form {
-  position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 3;
@@ -64,8 +69,8 @@
   display: none;
 }
 
-.btn_fleche_gauche {
-  position: absolute;
+.btn_fleche_gauche,
+.btn_fleche_droit {
   z-index: 1;
   color: antiquewhite;
   bottom: 0;
@@ -74,12 +79,5 @@
 }
 
 .btn_fleche_droit {
-  position: absolute;
-  z-index: 1;
-  color: antiquewhite;
-  bottom: 0;
   right: 0;
-  top: 50%;
-  height: 50px;
-  display: flex;
 }/*# sourceMappingURL=style.css.map */
