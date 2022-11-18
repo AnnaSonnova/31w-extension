@@ -113,7 +113,7 @@
         
         elmCarrousel__figure.children[i].classList.remove(
           "carrousel__figure__img--activer");
-          if(i==8){
+          if(i==7){
             elmCarrousel__figure.children[0].classList.add("carrousel__figure__img--activer");
           }else{
             elmCarrousel__figure.children[i+1].classList.add("carrousel__figure__img--activer");
@@ -135,7 +135,7 @@
         elmCarrousel__figure.children[i].classList.remove(
           "carrousel__figure__img--activer");
           if(i==0){
-            elmCarrousel__figure.children[8].classList.add("carrousel__figure__img--activer");
+            elmCarrousel__figure.children[7].classList.add("carrousel__figure__img--activer");
           }else{
             elmCarrousel__figure.children[i-1].classList.add("carrousel__figure__img--activer");
             break;
