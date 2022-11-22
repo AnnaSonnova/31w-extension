@@ -6,6 +6,8 @@
 /*
 Plugin Name: AC_carrousel
 Version: 1.0.0
+Author: Anna Sonnova
+Author URI: https://github.com/AnnaSonnova/31w-extension.git
 */
 
 
